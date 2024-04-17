@@ -49,7 +49,7 @@ else:
 # Logging handler
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
-ch.setFormatter(logging.Formatter("[%(levelname)-5s] %(message)s"))
+ch.setFormatter(logging.Formatter("[%(levelname)-s] - %(message)s"))
 logger.addHandler(ch)
 
 # Open VBN file
