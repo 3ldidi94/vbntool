@@ -66,7 +66,7 @@ qfile_path = vbn[4:4+384].decode("utf-8").strip("\x00")
 logger.info("Quarantined File was at: {}".format(qfile_path))
 
 # Parse metadata
-record_data = bytes(vbn[4 + 384 : 4 + 384 + 0x800]).decode("ascii").replace("\0", "")
+record_data = bytes(vbn[4 + 384 : 4 + 384 + 0x800]).decode("utf-8").replace("\0", "")
 info = logline.parse_log_line(record_data)
 if args.logline:
     for key, value in info.items():
